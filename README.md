@@ -28,6 +28,6 @@ wmake -f Makefile.ow2
 
 bildpunk is Public Domain.
 
-The licenses of the dependencies apply:
+The licenses of the dependencies apply (WIP, no dependencies yet)
 
 - lodepng is Copyright (c) 2005-2018 Lode Vandevenne
