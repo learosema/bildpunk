@@ -1,0 +1,35 @@
+# Compiler and linker settings
+CC = owcc
+LD = owcc
+CFLAGS = -zq -c -bdos4g
+LDFLAGS = -zq -bdos4g
+CP = copy
+DOS4GW_RUNTIME = $(%WATCOM)/binw/dos4gw.exe
+
+# Source files
+SRCS = bildpunk.cpp main.cpp
+
+# Object files
+OBJS = $(SRCS:.cpp=.obj)
+
+# Executable name
+TARGET = mode256.exe
+
+# Default target
+all: $(TARGET) postbuild .symbolic
+
+postbuild: .symbolic
+	$(CP) $(DOS4GW_RUNTIME) .
+
+# Build rule for object files
+.c.obj: %.c
+	$(CC) $(CFLAGS) -o $@ $<
+
+# Link rule for the executable
+$(TARGET): $(OBJS)
+	$(LD) $(LDFLAGS) -o $@ $(OBJS)
+
+# Clean rule
+clean: .symbolic
+	rm *.obj
+	rm *.exe
