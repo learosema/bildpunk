@@ -10,7 +10,7 @@ The name is derived from the german word for "pixel", which is also the swedish 
 
 It perfectly describes what Bildpunk is made for: to be creative with pixels.
 
-## Building via linux, targetting MSDOS
+## Building via linux, targetting DOS or DOSBox
 
 `mode256` is built using the OpenWatcom v2 compiler
 
@@ -23,6 +23,8 @@ source owsetenv_dos.sh
 # use WMAKE to build
 wmake -f Makefile.ow2
 ```
+
+It also compiles directly under DOS by using OpenWatcom v2 `WMAKE`.
 
 ## LICENSE
 
