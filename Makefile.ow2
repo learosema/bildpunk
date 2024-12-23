@@ -4,7 +4,7 @@ LD = owcc
 CFLAGS = -zq -c -bdos4g
 LDFLAGS = -zq -bdos4g
 CP = copy
-DOS4GW_RUNTIME = $(%WATCOM)/binw/dos4gw.exe
+DOS4GW_RUNTIME = $(%WATCOM)\binw\dos4gw.exe
 
 # Source files
 SRCS = bildpunk.cpp main.cpp
